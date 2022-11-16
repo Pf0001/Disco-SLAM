@@ -1,0 +1,7 @@
+<launch>
+    <group>
+        <node pkg="rosbag" type="play" name="rosbag_play" args="--clock $(env HOME)/Downloads/imu_lidar_cam1.bag"/>
+        <node pkg="rosbag" type="play" name="rosbag_play" args="--clock $(env HOME)/Downloads/imu_lidar_cam2.bag"/>
+        <node pkg="rosbag" type="record" name="rosbag_record" args="-a"/>
+    </group>
+</launch>

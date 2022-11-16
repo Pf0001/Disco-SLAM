@@ -1,0 +1,54 @@
+<launch>
+    <arg name="no"      default="1"/>
+    <arg name="project" default="lio_sam"/>
+    <arg name="robot"	default="robot1"/>
+    <arg name="id1"	default="robot0"/>
+    <arg name="id2"	default="robot2"/>
+
+    <!-- Parameters -->
+    <rosparam file="$(find lio_sam)/config/params_k_01.yaml" command="load" />
+    <rosparam file="$(find lio_sam)/src/DiSCo-SLAM/config/mapfusion_00.yaml" command="load" />
+
+    <!--- LOAM robot 0 -->
+    <!-- <include file="$(find lio_sam)/launch/include/module_loam.launch" >
+        <arg name="robot" value="$(arg robot0)"/>
+        <arg name="id1" value="$(arg robot1)"/>
+        <arg name="id2" value="$(arg robot2)"/>
+        <arg name="no" value="$(arg no)"/>
+    </include> -->
+
+    <!--- LOAM robot 1 -->
+    <include file="$(find lio_sam)/launch/include/module_loam.launch" >
+        <arg name="robot" value="$(arg robot)"/>
+        <arg name="id1" value="$(arg id1)"/>
+        <arg name="id2" value="$(arg id2)"/>
+        <arg name="no" value="$(arg no)"/>
+    </include>
+
+    <!--- LOAM robot 2 -->
+    <!-- <include file="$(find lio_sam)/launch/include/module_loam.launch" >
+        <arg name="robot" value="$(arg robot2)"/>
+        <arg name="id1" value="$(arg robot0)"/>
+        <arg name="id2" value="$(arg robot1)"/>
+        <arg name="no" value="$(arg no)"/>
+      </include> -->
+
+    <!--- Robot State TF -->
+    <!-- <include file="$(find lio_sam)/launch/include/module_robot_state_publisher.launch" /> -->
+
+    <!--- Run Navsat -->
+    <!-- <include file="$(find lio_sam)/launch/include/module_navsat.launch" /> -->
+
+    <!--- Run Rviz-->
+    <include file="$(find lio_sam)/launch/include/module_rviz.launch" />
+
+ <!-- <node pkg="rosbag" type="play" name="play01" output="screen" args= " /home/spf/robotbag/outdoor/robot1_floor2_midline.bag "/> -->
+
+
+
+
+
+
+</launch>
+
+
