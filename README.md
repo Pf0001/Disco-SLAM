@@ -4,16 +4,7 @@
 
 **A real-time lidar-inertial odometry package. We strongly recommend the users read this document thoroughly and test the package with the provided dataset first. A video of the demonstration of the method can be found on [YouTube](https://www.youtube.com/watch?v=A0H8CoORZJU).**
 
-<p align='center'>
-    <img src="./config/doc/demo.gif" alt="drawing" width="800"/>
-</p>
 
-<p align='center'>
-    <img src="./config/doc/device-hand-2.png" alt="drawing" width="200"/>
-    <img src="./config/doc/device-hand.png" alt="drawing" width="200"/>
-    <img src="./config/doc/device-jackal.png" alt="drawing" width="200"/>
-    <img src="./config/doc/device-boat.png" alt="drawing" width="200"/>
-</p>
 
 ## Menu
 
